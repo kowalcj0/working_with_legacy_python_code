@@ -11,10 +11,12 @@ Here are qualities of good unit tests:
     A unit test that takes 1/10th of a second to run is a slow unit test.
     Unit tests run fast. If they don’t run fast, they aren’t unit tests.
     Other kinds of tests often masquerade as unit tests. A test is not a unit test if:
-        1. It talks to a database.
-        2. It communicates across a network.
-        3. It touches the ﬁle system.
-        4. You have to do special things to your environment (such as editing conﬁguration ﬁles) to run it.
+
+    1. It talks to a database.
+    2. It communicates across a network.
+    3. It touches the ﬁle system.
+    4. You have to do special things to your environment (such as editing conﬁguration ﬁles) to run it.
+
     Tests that do these things aren’t bad. Often they are worth writing, and you generally
     will write them in unit test harnesses. However, it is important to be able to separate
     them from true unit tests so that you can keep a set of tests that you can run fast
@@ -33,15 +35,16 @@ When we change code, we should have tests in place. To put tests in place, we of
 Before you change code, you should have tests in place. But to put tests in place, you have to change code.
 Change as little code as possible to get tests in place.
 The recipe is:
-    * Identify change points (Seams)
-    * Break dependencies
-        * The two ways this problem manifests itself are difﬁculty instantiating objects in test harnesses and difﬁculty running methods in test harnesses.
-        ...there are two reasons to break dependencies: sensing and separation.
-            1. Sensing—We break dependencies to sense when we can’t access values our code computes.
-            2. Separation—We break dependencies to separate when we can’t even get a piece of code into a test harness to run.
-    * Write tests
-    * Make your changes
-    * Refactor
+
+* Identify change points (Seams)
+* Break dependencies
+    * The two ways this problem manifests itself are difﬁculty instantiating objects in test harnesses and difﬁculty running methods in test harnesses.
+    ...there are two reasons to break dependencies: sensing and separation.
+        1. Sensing—We break dependencies to sense when we can’t access values our code computes.
+        2. Separation—We break dependencies to separate when we can’t even get a piece of code into a test harness to run.
+* Write tests
+* Make your changes
+* Refactor
 
 
 Identify Seams to break your code dependencies
